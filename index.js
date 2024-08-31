@@ -9,7 +9,13 @@ const app = express();
 // Middleware
 app.use(express.json());
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://e-learning-frontend-rho.vercel.app",
+    methods: ["GET", "POST", "DELETE", "PUT"],
+    credentials: true,
+  })
+);
 
 app.use("/uploads", express.static("uploads"));
 
