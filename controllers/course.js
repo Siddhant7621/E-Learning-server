@@ -109,8 +109,8 @@ export const checkout = TryCatch(async (req, res) => {
         },
       ],
       mode: 'payment',
-      success_url: `http://localhost:5173/payment-success/${course._id}`, // Replace with your success URL
-      cancel_url: `http://localhost:5173/course/${course._id}`, // Replace with your cancel URL
+      success_url: `https://e-learning-frontend-rho.vercel.app/payment-success/${course._id}`, // Replace with your success URL
+      cancel_url: `https://e-learning-frontend-rho.vercel.app/course/${course._id}`, // Replace with your cancel URL
     });
 
     
