@@ -19,6 +19,11 @@ app.use(
 
 app.use("/uploads", express.static("uploads"));
 
+app.get("/", (req, res) => {
+    res.send("Server is working");
+  });
+  
+
 // Routes
 import userRoutes from "./routes/user.js";
 import courseRoutes from "./routes/course.js";
